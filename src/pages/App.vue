@@ -8,14 +8,17 @@
 <script>
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import ContentBody from "@/components/ContentBody";
+
+import {defineAsyncComponent } from "vue";
 
 export default {
   name: 'App',
   components: {
     Footer,
     Header,
-    ContentBody
+    ContentBody: defineAsyncComponent(() =>
+        import("@/components/ContentBody")
+    )
   }
 }
 </script>
