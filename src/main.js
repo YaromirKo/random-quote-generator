@@ -1,4 +1,13 @@
 import { createApp } from 'vue'
-import App from './App.vue'
+import App from './pages/App.vue'
 
-createApp(App).mount('#app')
+import './assets/css/tailwind.css'
+
+import {stateSymbol, createStore} from "@/store";
+
+const app = createApp(App)
+
+app.provide(stateSymbol, createStore())
+
+
+app.mount('#app')
