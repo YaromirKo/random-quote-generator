@@ -1,9 +1,11 @@
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [],
+  mode: 'layers',
+  layers: ['base', 'components', 'utilities'],
+  purge: [
+    './src/**/*.html',
+    './src/**/*.vue',
+    './src/**/*.jsx',
+  ],
   variants: {
     textColor: ['responsive', 'hover', 'focus', 'group-hover'],
   },
