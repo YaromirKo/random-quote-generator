@@ -5,7 +5,7 @@
     </header>
   </transition>
 
-  <transition-group name="list">
+  <transition-group name="list" mode="out-in">
     <div class="my-16" v-for="item in store.state.data" :key="item['_id']">
       <Quote :quote="item.quoteText"/>
     </div>
